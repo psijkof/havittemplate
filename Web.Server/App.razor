@@ -1,0 +1,39 @@
+﻿@using Havit.NewProjectTemplate.Web.Client
+@using Microsoft.AspNetCore.Components.Web
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="author" content="Developed by HAVIT, https://www.havit.cz" />
+
+    <title>NewProjectTemplate</title>
+    <base href="/" />
+
+	@((MarkupString)HxSetup.RenderBootstrapCssReference())
+
+    <link href="@GetFileVersionPath("_content/Havit.Blazor.Components.Web.Bootstrap/defaults.css")" rel="stylesheet" />
+    <link href="@GetFileVersionPath("Havit.NewProjectTemplate.Web.Server.styles.css" )" rel="stylesheet" /> <!-- CSS Isolation -->
+    <link href="@GetFileVersionPath("css/site.css")" rel="stylesheet")" />
+
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+
+    <BlazorApplicationInsights.ApplicationInsightsInit @rendermode="@RenderMode.InteractiveWebAssembly" />
+
+    <HeadOutlet @rendermode="new InteractiveWebAssemblyRenderMode(prerender: false)" />
+</head>
+
+<body>
+  <Routes @rendermode="new InteractiveWebAssemblyRenderMode(prerender: false)" />
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">&times;</a>
+    </div>
+
+    <script src="@GetFileVersionPath("_framework/blazor.web.js")"></script>
+    @((MarkupString)HxSetup.RenderBootstrapJavaScriptReference())
+</body>
+</html>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>Havit.NewProjectTemplate.Primitives</AssemblyName>
+		<RootNamespace>Havit.NewProjectTemplate.Primitives</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Havit.Core" />
+	</ItemGroup>
+
+</Project>

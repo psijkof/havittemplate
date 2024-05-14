@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>Havit.NewProjectTemplate.Services</AssemblyName>
+		<RootNamespace>Havit.NewProjectTemplate.Services</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Havit.NewProjectTemplate.Services.Tests" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Havit.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Havit.Services" />
+		<PackageReference Include="MailKit" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Contracts\Contracts.csproj" />
+		<ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+		<ProjectReference Include="..\Model\Model.csproj" />
+		<ProjectReference Include="..\Primitives\Primitives.csproj" />
+	</ItemGroup>
+</Project>	 

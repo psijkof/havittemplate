@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>Havit.NewProjectTemplate.Model</AssemblyName>
+		<RootNamespace>Havit.NewProjectTemplate.Model</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Havit.Core" />
+		<PackageReference Include="Havit.Data.EntityFrameworkCore.Abstractions" />
+		<PackageReference Include="Havit.Model" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Primitives\Primitives.csproj" />
+	</ItemGroup>
+
+</Project>

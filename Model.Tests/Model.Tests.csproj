@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<AssemblyName>Havit.NewProjectTemplate.Model.Tests</AssemblyName>
+		<RootNamespace>Havit.NewProjectTemplate.Model.Tests</RootNamespace>
+		<PublishDir>obj\$(Configuration)\publish</PublishDir>
+		<EnableMSTestRunner>true</EnableMSTestRunner>
+		<OutputType>Exe</OutputType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MSTest" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Model\Model.csproj" />
+	</ItemGroup>
+
+</Project>

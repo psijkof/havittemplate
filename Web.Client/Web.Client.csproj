@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>Havit.NewProjectTemplate.Web.Client</AssemblyName>
+		<RootNamespace>Havit.NewProjectTemplate.Web.Client</RootNamespace>
+		<BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+		<NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+		<StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+		<!--  VSTHRD003: Avoid awaiting or returning a Task representing work that was not started within your context as that can lead to deadlocks. -->
+		<!--  VSTHRD200: Allow HandleXyClick methods (without Async) -> Suppress 'Use "Async" suffix in names of methods that return an awaitable type' -->
+		<NoWarn>$(NoWarn);VSTHRD003;VSTHRD200</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<TrimmerRootDescriptor Include="TrimmerRootDescriptor.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Resources\Model\**" />
+	  <Content Remove="Resources\Model\**" />
+	  <EmbeddedResource Remove="Resources\Model\**" />
+	  <None Remove="Resources\Model\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BlazorApplicationInsights" />
+		<PackageReference Include="Blazored.FluentValidation" />
+		<PackageReference Include="Blazored.LocalStorage" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+		<PackageReference Include="Havit.Blazor.Components.Web.Bootstrap" />
+		<PackageReference Include="Havit.Blazor.Grpc.Client" />
+		<PackageReference Include="Havit.Extensions.Localization" />
+		<PackageReference Include="Havit.SourceGenerators.StrongApiStringLocalizers">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Contracts\Contracts.csproj" />
+		<ProjectReference Include="..\Primitives\Primitives.csproj" />
+		<ProjectReference Include="..\Resources\Resources.csproj" />
+	</ItemGroup>
+
+</Project>

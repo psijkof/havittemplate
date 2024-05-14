@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<AssemblyName>Havit.NewProjectTemplate.TestsForLocalDebugging</AssemblyName>
+		<RootNamespace>Havit.NewProjectTemplate.TestsForLocalDebugging</RootNamespace>
+		<!-- Route the publish folder outside of the bin folder to avoid running unit tests twice (from bin\Release\netcoreapp and bin\Release\netcoreapp\publish) -->
+		<PublishDir>obj\$(Configuration)\publish</PublishDir>
+		<EnableMSTestRunner>true</EnableMSTestRunner>
+		<OutputType>Exe</OutputType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MSTest" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+		<ProjectReference Include="..\Entity\Entity.csproj" />
+		<ProjectReference Include="..\Facades\Facades.csproj" />
+		<ProjectReference Include="..\Model\Model.csproj" />
+		<ProjectReference Include="..\Services\Services.csproj" />
+		<ProjectReference Include="..\TestHelpers\TestHelpers.csproj" />
+		<ProjectReference Include="..\DependencyInjection\DependencyInjection.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
